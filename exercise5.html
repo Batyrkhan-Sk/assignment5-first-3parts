@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifth Exercise</title>
+</head>
+<body>
+    <script>
+        const findLongestAndShortest = () => {
+            let words = [];
+
+            for (let i = 0; i < 3; i++){
+                let word = prompt("Please enter a word " + (i + 1) + ":");
+                words.push(word);
+            }
+
+            let longest = words[0];
+            let shortest = words[0];
+
+            for (let word of words){
+                if (word.length > longest.length) longest = word
+
+                if (word.length < shortest.length) shortest = word;
+
+            }
+
+            console.log("The longest word is: " + longest);
+            console.log("The shortest word is: " + shortest);
+        }
+
+        findLongestAndShortest();
+
+
+    </script>
+</body>
+</html>

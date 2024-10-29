@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Exercise</title>
+</head>
+<body>
+    <script>
+    const alphabeticalOrder = (str) => {
+        return str
+        .split(' ')
+        .map(word => word.split('').sort().join(''))
+        .join(' ')
+    }
+
+    const sentence = prompt("Enter the sentence: ")
+    console.log(alphabeticalOrder(sentence));
+    </script>
+</body>
+</html>

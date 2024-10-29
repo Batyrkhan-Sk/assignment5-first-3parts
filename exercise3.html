@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third Exercise</title>
+</head>
+<body>
+    <script>
+        const getNonRepeatedCharacters = (str) => {
+            return str
+            .split('')
+            .filter((value, index, array) => array.indexOf(value) === array.lastIndexOf(value))[0];
+        }
+
+        let userInput = prompt("Enter the characters: ")
+        console.log(getNonRepeatedCharacters(userInput));
+
+    </script>
+</body>
+</html>

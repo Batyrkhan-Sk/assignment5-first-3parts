@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thirteenth Exercise</title>
+</head>
+<body>
+    <h2>Enter the radius of a cone to calculate its volume</h2>
+    <label for="radius">Radius: </label>
+    <input type="number" id="radius">
+
+    <label for="height">Height: </label>
+    <input type="number" id="height">
+
+    
+    <label for="volume">Volume:</label>
+    <input type="text" id="volume" value="0.0000" readonly>
+
+    <button onclick="calculateVolumeOfCone()">Calculate</button>
+
+    <script>
+        function calculateVolumeOfCone() {
+            const radius = document.getElementById("radius").value;
+            const height = document.getElementById("height").value;
+            const volume = (1 / 3) * height * Math.PI * Math.pow(radius, 2);
+            document.getElementById("volume").value=volume.toFixed(4);
+        }
+    </script>
+</body>
+</html>

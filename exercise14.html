@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourteenth Exercise</title>
+</head>
+<body>
+    <div>
+        <h2>Input base area and height to get the volume of a prism.</h2>
+
+        <label for="baseArea">Base Area (a * b): </label>
+        <input type="number" id="baseArea" placeholder="Enter base area">
+
+        <label for="prismHeight">Height: </label>
+        <input type="number" id="prismHeight" placeholder="Enter height">
+
+        <label for="prismVolume">Volume: </label>
+        <input type="text" id="prismVolume" value="0.0000" readonly>
+
+        <button onclick="calculatePrismVolume()">Calculate</button>
+    </div>
+
+    <script>
+        function calculatePrismVolume() {
+            const B = document.getElementById('baseArea').value;
+            const h = document.getElementById('prismHeight').value;
+            const volume = B * h;
+            document.getElementById('prismVolume').value = volume.toFixed(4);
+        }
+    </script>
+</body>
+</html>

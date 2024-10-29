@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifteenth Exercise</title>
+</head>
+<body>
+    <div>
+        <h2>Input base and height to get the area of a triangle.</h2>
+
+        <label for="triangleBase">Base: </label>
+        <input type="number" id="triangleBase" placeholder="Enter base">
+
+        <label for="triangleHeight">Height: </label>
+        <input type="number" id="triangleHeight" placeholder="Enter height">
+
+        <label for="triangleArea">Area: </label>
+        <input type="text" id="triangleArea" value="0.0000" readonly>
+
+        <button onclick="calculateTriangleArea()">Calculate</button>
+    </div>
+
+    <script>
+        function calculateTriangleArea() {
+            const b = document.getElementById('triangleBase').value;
+            const h = document.getElementById('triangleHeight').value;
+            const area = 0.5 * b * h;
+            document.getElementById('triangleArea').value = area.toFixed(4);
+        }
+    </script>
+</body>
+</html>

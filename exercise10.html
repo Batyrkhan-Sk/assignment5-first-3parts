@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenth Exercise</title>
+</head>
+<body>
+    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis placeat molestiae quasi sequi ducimus. Cum doloribus neque quod, cupiditate quaerat deleniti omnis asperiores dicta facere ipsam, eveniet eligendi dolorem eaque corporis officiis repellat minus vitae quasi facilis ea modi! Doloribus, facilis. Minus magni a quisquam dolor nulla voluptas ut ea accusantium assumenda quasi consectetur quidem ipsa sapiente consequuntur, neque sequi excepturi amet! Qui obcaecati error debitis beatae odit optio, tenetur labore. Velit recusandae excepturi nisi expedita! Aperiam, aspernatur fugit? Dicta cupiditate, aspernatur quia enim beatae accusantium obcaecati non tenetur rem? Cupiditate vero assumenda laudantium earum, magni minus qui blanditiis laborum!</p>    
+    <script>
+        const paragraph = document.getElementById('text');
+
+        paragraph.innerHTML = paragraph.innerText
+        .split(' ')
+        .map(word => {
+            if (word.toLowerCase().startsWith('a')){
+                return `<i>${word}</i>`;
+            }
+            if (word.toLowerCase().endsWith('s')){
+                return `<u>${word}</u>`;
+            }
+            return word;
+        })
+        .join(' ');
+    </script>
+</body>
+</html>

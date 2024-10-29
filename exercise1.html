@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Exercise</title>
+</head>
+
+<body>
+    <script>
+        const closestTo100 = (a, b, c) => {
+            const distA = Math.abs(100 - a);
+            const distB = Math.abs(100 - b);
+            const distC = Math.abs(100 - c);
+
+            const minDist = Math.min(distA, distB, distC);
+
+            if (minDist === distA) return a;
+            if (minDist === distB) return b;
+            return c;
+        }
+
+        const farthestFrom100 = (a, b, c) => {
+            const distA = Math.abs(100 - a);
+            const distB = Math.abs(100 - b);
+            const distC = Math.abs(100 - c);
+
+            const maxDist = Math.max(distA, distB, distC);
+
+            if (maxDist === distA) return a;
+            if (maxDist === distB) return b;
+            return c;
+        }
+
+        const a = parseFloat(prompt("Enter the first number: "))
+        const b = parseFloat(prompt("Enter the second number: "))
+        const c = parseFloat(prompt("Enter the third number: "))
+
+        console.log(`Closest to 100: ${closestTo100(a, b, c)}`);
+        console.log(`Farthest from 100: ${farthestFrom100(a, b, c)}`);
+    </script>
+</body>
+
+</html>
